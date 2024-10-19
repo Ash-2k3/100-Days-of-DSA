@@ -1,4 +1,4 @@
-# Question 1 link: https://takeuforward.org/plus/data-structures-and-algorithm/sorting/algorithms/selection-sort
+# Question link: https://takeuforward.org/plus/data-structures-and-algorithm/sorting/algorithms/selection-sort
 
 class Solution:
     def selectionSort(self, nums):
