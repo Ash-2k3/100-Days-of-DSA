@@ -2,19 +2,14 @@
 
 class Solution:
     def selectionSort(self, nums):
-        write_index = 0
-        read_index = 0
-        while write_index < len(nums):
-            min_ele = float('inf')
-            min_index = -1
-            for i in range(read_index, len(nums)):
-                if min_ele > nums[i]:
-                    min_ele = nums[i]
-                    min_index = i
+        n = len(nums)
+        for i in range(n - 1):
+            min_index = i
+            for j in range(i + 1, n):
+                if nums[j] < nums[min_index]:
+                    min_index = j
             
-            nums[write_index], nums[min_index] = nums[min_index], nums[write_index]
-
-            write_index += 1
-            read_index += 1
+            if min_index != i:
+                nums[i], nums[min_index] = nums[min_index], nums[i]
         
         return nums
