@@ -12,3 +12,4 @@ class Solution:
             if not swapped:
                 break
         return nums
+ 
