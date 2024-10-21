@@ -4,7 +4,7 @@ class Solution:
         max_right = float('-inf')
         
         for num in reversed(nums):
-            if num >= max_right:
+            if num > max_right:
                 leaders.append(num)
                 max_right = num
         
