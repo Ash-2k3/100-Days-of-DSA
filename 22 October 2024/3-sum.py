@@ -2,11 +2,23 @@ class Solution:
     def threeSum(self, nums):
         ans = []
         n = len(nums)
+        triplet_set = set()
+        nums.sort()
         for i in range(n - 2):
-            for j in range(i + 1, n -1 ):
-                for k in range(j + 1, n):
-                    if nums[i] + nums[j] + nums[k] == 0:
-                        triplet = [nums[i], nums[j], nums[k]]
-                        if sorted(triplet) not in ans:
-                            ans.append(sorted(triplet))
+            target_val = -1*nums[i]
+            left_ptr = i + 1
+            right_ptr = n - 1
+            while left_ptr < right_ptr:
+                if nums[left_ptr] + nums[right_ptr] == target_val:
+                    triplet = [nums[left_ptr],nums[right_ptr], nums[i] ]
+                    if tuple(triplet) in triplet_set:
+                        left_ptr += 1
+                        right_ptr -= 1
+                    else:
+                        triplet_set.add(tuple(triplet))
+                        ans.append(triplet)
+                elif nums[left_ptr] + nums[right_ptr] > target_val:
+                    right_ptr -= 1
+                else:
+                    left_ptr += 1
         return ans
