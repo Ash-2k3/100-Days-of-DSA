@@ -1,24 +1,34 @@
 class Solution:
     def threeSum(self, nums):
         ans = []
-        n = len(nums)
-        triplet_set = set()
         nums.sort()
+        n = len(nums)
+        
         for i in range(n - 2):
-            target_val = -1*nums[i]
-            left_ptr = i + 1
-            right_ptr = n - 1
-            while left_ptr < right_ptr:
-                if nums[left_ptr] + nums[right_ptr] == target_val:
-                    triplet = [nums[left_ptr],nums[right_ptr], nums[i] ]
-                    if tuple(triplet) in triplet_set:
-                        left_ptr += 1
-                        right_ptr -= 1
-                    else:
-                        triplet_set.add(tuple(triplet))
-                        ans.append(triplet)
-                elif nums[left_ptr] + nums[right_ptr] > target_val:
-                    right_ptr -= 1
+            # Skip duplicate values for the first element
+            if i > 0 and nums[i] == nums[i-1]:
+                continue
+            
+            left, right = i + 1, n - 1
+            
+            while left < right:
+                total = nums[i] + nums[left] + nums[right]
+                
+                if total == 0:
+                    ans.append([nums[i], nums[left], nums[right]])
+                    
+                    # Skip duplicate values for the second element
+                    while left < right and nums[left] == nums[left+1]:
+                        left += 1
+                    # Skip duplicate values for the third element
+                    while left < right and nums[right] == nums[right-1]:
+                        right -= 1
+                    
+                    left += 1
+                    right -= 1
+                elif total < 0:
+                    left += 1
                 else:
-                    left_ptr += 1
+                    right -= 1
+        
         return ans
