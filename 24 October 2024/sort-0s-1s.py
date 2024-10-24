@@ -1,23 +1,20 @@
 class Solution:
     def sortZeroOneTwo(self, nums):
-        ans = [-1 for _ in range(len(nums))]
-        n = len(ans)
-        left_ptr = 0
-        right_ptr = n - 1
+        n = len(nums)
+        zero_ptr = 0
+        two_ptr = n - 1
 
-        for num in nums:
-            if num == 0:
-                ans[left_ptr] = 0
-                left_ptr += 1
-            elif num == 2:
-                ans[right_ptr] = 2
-                right_ptr -= 1
-        
-        while left_ptr <= right_ptr:
-            ans[left_ptr] = 1
-            left_ptr += 1
-        
-        for i in range(n):
-            nums[i] = ans[i]
+        i = 0
+        while(i <= two_ptr):
+            if nums[i] == 0:
+                nums[i], nums[zero_ptr] = nums[zero_ptr], nums[i]
+                zero_ptr += 1
+                i += 1
 
-        return ans
+            elif nums[i] == 2:
+                nums[i], nums[two_ptr] = nums[two_ptr], nums[i]
+                two_ptr -= 1
+            else:
+                i += 1
+        
+        return nums
