@@ -1,19 +1,16 @@
 class Solution:
     def majorityElement(self, nums):
-        freq_map = {}
+        max_ele = nums[0]
+        max_count = 1
 
-        for num in nums:
-            if num in freq_map:
-                freq_map[num] += 1
+        for i in range(1, len(nums)):
+            if nums[i] == max_ele:
+                max_count += 1
             else:
-                freq_map[num] = 1
+                max_count -= 1
 
-        max_count = 0
-        max_ele = 0
-
-        for key, val in freq_map.items():
-            if max_count < val:
-                max_count = val
-                max_ele = key
-            
+                if max_count < 0:
+                    max_ele = nums[i]
+                    max_count = 1
+        
         return max_ele
