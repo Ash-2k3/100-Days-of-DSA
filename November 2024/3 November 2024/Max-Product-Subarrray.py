@@ -1,31 +1,24 @@
 class Solution:
     def maxProduct(self, nums):
-        suffix_arr = [1 for _ in range(len(nums))]
-        preffix_arr = []
+        if not nums:
+            return 0
 
-        # Calculate the prefix
-        for i, num in enumerate(nums):
-            if i == 0:
-                preffix_arr.append(1)
-                continue
+        max_so_far = nums[0]
+        min_so_far = nums[0]
+        result = nums[0]
 
-            curr_product = nums[i - 1] * preffix_arr[i - 1]
-            if preffix_arr[i - 1] == 0:
-                preffix_arr.append(nums[i - 1])
-            else:
-                preffix_arr.append(curr_product)
+        for i in range(1, len(nums)):
+            current_num = nums[i]
 
-        # Calculate the suffix
-        for i in range(len(nums) - 2, -1, -1):
-            curr_product = suffix_arr[i + 1] * nums[i + 1]
-            if suffix_arr[i + 1] == 0:
-                suffix_arr[i] = nums[i + 1]
-            else:
-                suffix_arr[i] = curr_product
+            # When multiplying by a negative number, swap max and min
+            if current_num < 0:
+                max_so_far, min_so_far = min_so_far, max_so_far
 
-        ans = float('-inf')
-        # Calculating the Result
-        for i in range(len(nums)):
-            ans = max(ans, suffix_arr[i]*nums[i], preffix_arr[i]*nums[i], nums[i])
+            # Update max and min products at this position
+            max_so_far = max(current_num, max_so_far * current_num)
+            min_so_far = min(current_num, min_so_far * current_num)
 
-        return ans
+            # Update result with the largest product found so far
+            result = max(result, max_so_far)
+
+        return result
