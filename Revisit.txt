@@ -22,4 +22,5 @@ https://takeuforward.org/plus/data-structures-and-algorithm/arrays/faqs-hard/cou
 8. Maximum Product subarray
 https://takeuforward.org/plus/data-structures-and-algorithm/arrays/faqs-hard/maximum-product-subarray-in-an-array
 
-9. 
+9. Count Sub array with sum K
+https://takeuforward.org/plus/data-structures-and-algorithm/hashing/faqs/count-subarrays-with-given-sum/submissions
