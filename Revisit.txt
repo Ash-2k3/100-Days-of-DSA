@@ -1,0 +1,25 @@
+1. Longest subarray with sum K
+https://takeuforward.org/plus/data-structures-and-algorithm/hashing/faqs/longest-subarray-with-sum-k
+
+2. Longest Consecutive Sequence in an Array
+https://takeuforward.org/plus/data-structures-and-algorithm/hashing/faqs/longest-consecutive-sequence-in-an-array
+
+3. Rotate Matrix by 90 degrees
+https://takeuforward.org/plus/data-structures-and-algorithm/arrays/faqs-medium/rotate-matrix-by-90-degrees
+
+4. Kadane's algorithm
+https://takeuforward.org/plus/data-structures-and-algorithm/arrays/faqs-medium/kadane's-algorithm
+
+5. Majority Element 2
+https://takeuforward.org/plus/data-structures-and-algorithm/arrays/faqs-hard/majority-element-ii
+
+6. Find the repeating and Missing number
+https://takeuforward.org/plus/data-structures-and-algorithm/arrays/faqs-hard/find-the-repeating-and-missing-number
+
+7. Find Inversions
+https://takeuforward.org/plus/data-structures-and-algorithm/arrays/faqs-hard/count-inversions
+
+8. Maximum Product subarray
+https://takeuforward.org/plus/data-structures-and-algorithm/arrays/faqs-hard/maximum-product-subarray-in-an-array
+
+9. 
