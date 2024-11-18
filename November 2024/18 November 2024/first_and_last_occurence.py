@@ -1,27 +1,42 @@
 class Solution:
     def searchRange(self, nums, target):
-        left = 0
-        right = len(nums) - 1
+        def findFirst(nums, target):
+            left, right = 0, len(nums) - 1
+            first_occ = -1
 
-        while left<= right:
-            mid = (left + right) // 2
+            while left <= right:
+                mid = (left + right) // 2
 
-            if nums[mid] == target:
-                first_occ, last_occ = mid, mid
-                pointer = mid
-                while pointer >= 0 and nums[pointer] == target:
-                    first_occ = pointer
-                    pointer -= 1
+                if nums[mid] == target:
+                    first_occ = mid  # Potential first occurrence
+                    right = mid - 1  # Search towards the left
+                elif nums[mid] < target:
+                    left = mid + 1
+                else:
+                    right = mid - 1
 
-                pointer = mid
+            return first_occ
 
-                while pointer < len(nums) and nums[pointer] == target:
-                    last_occ = pointer
-                    pointer += 1
-                
-                return [first_occ, last_occ]
-            elif nums[mid] > target:
-                right = mid - 1
-            else:
-                left = mid + 1
-        return [-1, -1]
+        def findLast(nums, target):
+            left, right = 0, len(nums) - 1
+            last_occ = -1
+
+            while left <= right:
+                mid = (left + right) // 2
+
+                if nums[mid] == target:
+                    last_occ = mid  # Potential last occurrence
+                    left = mid + 1  # Search towards the right
+                elif nums[mid] < target:
+                    left = mid + 1
+                else:
+                    right = mid - 1
+
+            return last_occ
+
+        # Find the first and last occurrences
+        first_occ = findFirst(nums, target)
+        last_occ = findLast(nums, target)
+
+        # If the target is not found, both will be -1
+        return [first_occ, last_occ]
