@@ -28,3 +28,5 @@ https://takeuforward.org/plus/data-structures-and-algorithm/hashing/faqs/count-s
 10. Count subarrays with XOR as k
 https://takeuforward.org/plus/data-structures-and-algorithm/hashing/faqs/count-subarrays-with-given-xor-k
 
+11. Find out how many times the array was sorted
+https://takeuforward.org/plus/data-structures-and-algorithm/binary-search/logic-building/find-out-how-many-times-the-array-is-rotated/submissions
