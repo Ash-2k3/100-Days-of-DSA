@@ -33,3 +33,6 @@ https://takeuforward.org/plus/data-structures-and-algorithm/binary-search/logic-
 
 12. Find out the duplicate elements in sorted array.
 https://takeuforward.org/plus/data-structures-and-algorithm/binary-search/logic-building/single-element-in-sorted-array
+
+13. Single Element in the sorted array.
+https://takeuforward.org/plus/data-structures-and-algorithm/binary-search/logic-building/single-element-in-sorted-array
