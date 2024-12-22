@@ -4,12 +4,16 @@ class Solution:
         nums.sort()
         searchSpace = nums[-1] - nums[0]
         ans = 0
-        for i in range(1, searchSpace + 1):
-            if self.canWePlace(i, nums, k):
-                ans = i
+        start = 1
+        end = searchSpace
+        while start <= end:
+            mid = (start + end) // 2
+            if self.canWePlace(mid, nums, k):
+                ans = mid
+                start = mid + 1
                 continue
             else:
-                break
+                end = mid - 1
         return ans
 
     @staticmethod
