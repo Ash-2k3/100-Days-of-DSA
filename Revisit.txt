@@ -36,3 +36,6 @@ https://takeuforward.org/plus/data-structures-and-algorithm/binary-search/logic-
 
 13. Single Element in the sorted array.
 https://takeuforward.org/plus/data-structures-and-algorithm/binary-search/logic-building/single-element-in-sorted-array
+
+14. Aggressive Cows
+https://takeuforward.org/plus/data-structures-and-algorithm/binary-search/faqs/aggressive-cows
