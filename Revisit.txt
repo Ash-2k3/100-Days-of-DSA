@@ -39,3 +39,8 @@ https://takeuforward.org/plus/data-structures-and-algorithm/binary-search/logic-
 
 14. Aggressive Cows
 https://takeuforward.org/plus/data-structures-and-algorithm/binary-search/faqs/aggressive-cows
+
+15. Book Allocation Problem
+https://takeuforward.org/plus/data-structures-and-algorithm/binary-search/faqs/book-allocation-problem
+
+16. 
