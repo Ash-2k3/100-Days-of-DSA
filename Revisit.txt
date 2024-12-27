@@ -43,4 +43,5 @@ https://takeuforward.org/plus/data-structures-and-algorithm/binary-search/faqs/a
 15. Book Allocation Problem
 https://takeuforward.org/plus/data-structures-and-algorithm/binary-search/faqs/book-allocation-problem
 
-16. 
+16. Merge Two sorted Arrays
+https://takeuforward.org/plus/data-structures-and-algorithm/arrays/faqs-hard/merge-two-sorted-arrays-without-extra-space
