@@ -48,3 +48,9 @@ https://takeuforward.org/plus/data-structures-and-algorithm/arrays/faqs-hard/mer
 
 17. Find Kth element - Revisit with Binary Search
 https://takeuforward.org/plus/data-structures-and-algorithm/binary-search/faqs/find-peak-element
+
+18. Minimize max dist to a Gas Station - Revisit with Binary Search
+https://takeuforward.org/plus/data-structures-and-algorithm/binary-search/faqs/minimise-max-distance-to-gas-stations
+
+19. Median of two sorted Arrays - Revisit with Binary Search
+https://takeuforward.org/plus/data-structures-and-algorithm/binary-search/faqs/median-of-2-sorted-arrays
