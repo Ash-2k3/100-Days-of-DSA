@@ -18,7 +18,8 @@ class Solution:
         
         return False
     
-    def search_for_target(self, arr, target):
+    @staticmethod
+    def search_for_target(arr, target):
         left = 0
         right = len(arr) - 1
 
